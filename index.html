@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Rapport-TP1-IFT3911</title>
+        <style type="text/css">
+            table{border: outset 2px black;border-collapse: collapse;}
+            th {border-bottom: double 2px black;}
+            td {border-bottom: solid 1px black;}
+            .first_col {border-right: double 2px black;}
+            .bold {font-weight: bold;}
+            .tg  {border-collapse:collapse;border-spacing:0;}
+            .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+            .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+            .tg .tg-s268{text-align:left}
+            .flex-wrapper{display: flex; align-items: center;}
+        </style>
+    </head>
+    <body style="margin: 0 40px;">
+        <h1 style="text-align: center;">
+            IFT 3911 - Devoir 2
+        </h1>
+        <h2>
+            Informations générales
+        </h2>
+        <hr>
+        <p>
+            <span class="bold">Nom: </span>Jonathan Caspar
+            <br />
+            <span class="bold">Matricule (4 derniers chiffres): </span>9041
+            <br />
+            <span class="bold">Courriel: </span>jonathan.caspar@umontreal.ca
+            <br />
+            <span class="bold">temps mis: </span>24 heures
+        </p>
+        <p>
+            <span class="bold">Nom: </span>Johnny Pho
+            <br/>
+            <span class="bold">Matricule(4 derniers chiffres): </span>6014
+            <br /> 
+            <span class="bold">Courriel: </span>johnny.pho@umontreal.ca
+            <br />
+            <span class="bold">temps mis: </span>24 heures
+        </p>
+        <p>
+            <span class="bold">Nom: </span>Emna Ghannouchi
+            <br/>
+            <span class="bold">Matricule(4 derniers chiffres): </span>5141
+            <br /> 
+            <span class="bold">Courriel: </span>amna.ghannouchi@umontreal.ca
+            <br />
+            <span class="bold">temps mis: </span>24 heures
+        </p>
+        <h2>
+            Distribution des tâches
+        </h2>
+        <hr>
+        <p>
+            <span class="bold">Soumetteur: </span>Jonathan Caspar
+        </p>
+        <table cellpadding="7px">
+            <thead>
+                <tr>
+                    <th class="first_col">
+                        Tâches
+                    </th>
+                    <th>
+                        Jonathan
+                    </th>
+                    <th>
+                        Johnny
+                    </th>
+                    <th>
+                        Emna
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="first_col">
+                        Diagramme de classe
+                    </td>
+                    <td>
+                        33.33%
+                    </td>
+                    <td>
+                        33.33%
+                    </td>
+                    <td>
+                        33.33%
+                    </td>
+                </tr>
+                <tr>
+                    <td class="first_col">
+                        Diagrammes de séquence
+                    </td>
+                    <td>
+                        25%
+                    </td>
+                    <td>
+                        25%
+                    </td>
+                    <td>
+                        50%
+                    </td>
+                </tr>
+                <tr>
+                    <td class="first_col">
+                        Diagramme de paquets
+                    </td>
+                    <td>
+                        80%
+                    </td>
+                    <td>
+                        10%
+                    </td>
+                    <td>
+                        10%
+                    </td>
+                </tr>
+                </tr>
+                <tr>
+                    <td class="first_col">
+                        Identifications des modules réutilisables
+                    </td>
+                    <td>
+                        30%
+                    </td>
+                    <td>
+                        40%
+                    </td>
+                    <td>
+                        30%
+                    </td>
+                </tr>
+                </tr>
+                <tr>
+                    <td class="first_col">
+                        Contraintes OCL
+                    </td>
+                    <td>
+                        80%
+                    </td>
+                    <td>
+                        10%
+                    </td>
+                    <td>
+                        10%
+                    </td>
+                </tr>
+                </tr>
+                <tr>
+                    <td class="first_col">
+                        Discussion du couplage et de la cohésion des modules
+                    </td>
+                    <td>
+                        33.33%
+                    </td>
+                    <td>
+                        33.33%
+                    </td>
+                    <td>
+                        33.33%
+                    </td>
+                </tr>
+                </tr>
+                <tr>
+                    <td class="first_col">
+                        Discussion du fardeau des classes
+                    </td>
+                    <td>
+                        33.33%
+                    </td>
+                    <td>
+                        33.33%
+                    </td>
+                    <td>
+                        33.33%
+                    </td>
+                </tr>
+                </tr>
+                <tr>
+                    <td class="first_col">
+                        Graphe IA et justification
+                    </td>
+                    <td>
+                        20%
+                    </td>
+                    <td>
+                        30%
+                    </td>
+                    <td>
+                        50%
+                    </td>
+                </tr>
+                </tr>
+                <tr>
+                    <td class="first_col">
+                        Justification de l'application des principes de conception
+                    </td>
+                    <td>
+                        25%
+                    </td>
+                    <td>
+                        35%
+                    </td>
+                    <td>
+                        40%
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Hypothèses</h1>
+        <hr>
+        <ul>
+            <li>Les avions possèdent toujours au moins une section (par défaut 1 section = intégralité des sièges qui composent l'avion).</li>
+            <li>Un siège est considéré "libre lorsqu'il possède un attribut "reservationAssociée" nul.</li>
+            <li>Un siège est considéré "réservé pour 24h" si sa "reservationAssociée" a la valeur de son attribut "Confirmé = False".</li>
+            <li>Un siège est considéré "réservé définitivement" si sa "reservationAssociée" a la valeur de son attribut "Confirmé = True".</li>
+            <li>Un client peut réserver plusieurs sièges pour une même réservation (même numéro de réservation) pour plusieurs sièges.</li>
+            <li>Un client paye ou se faire rembourser le montant adéquat immédiatement après qu'il ait demandé une annulation ou une modification de réservation.</li>
+            <li>La partie alphabétique (2 lettres) de l'identifiant d'un vol est déterminée par l'attribut "shortName" de la compagnie aérienne qui offre le vol.</li>
+        </ul>
+        <h1>Sommaire</h1>
+        <hr>
+        <ul>
+            <li><a href="#tache1">Tâche 1 : Diagramme de classe</a><br></li>
+            <li><a href="#tache2">Tache 2 : Diagrammes de séquence</a><br></li>
+            <li><a href="#tache3">Tâche 3 : Diagramme de paquets</a><br></li>
+            <li><a href="#tache4">Tâche 4 : Identifications des modules réutilisables</a><br></li>
+            <li><a href="#tache5">Tâche 5 : Contraintes OCL</a><br></li>
+            <li><a href="#tache6">Tâche 6 : Discussion du couplage et de la cohésion des modules</a><br></li>
+            <li><a href="#tache7">Tâche 7 : Discussion du fardeau des classes</a><br></li>
+            <li><a href="#tache8">Tâche 8 : Graphe IA et justification</a><br></li>
+            <li><a href="#tache9">Tâche 9 : Justification de l'application des principes de conception</a><br></li>
+        </ul>
+        <h1 style="color: red;">Design Logiciel</h1>
+        <hr>
+        <p>Les projets .vpp contenant tous les diagrammes liés au design sont disponibles ici : le diagramme de classe et de paquets (<a href="Design/DiagClasse.vpp">lien</a>) et les diagrammes de séquences (<a href="Design/DiagSequence.vpp">lien</a>).</p>
+        <h2 id="tache1">Tâche 1 : Diagramme de classe</h2>
+        <hr>
+        <img src="Design/img/ConceptDia.png" style="width: 60%; margin: 0 auto; display: flex;">
+        <br><br><br>
+        <h2 id="tache2"> Tâche 2 : Diagrammes de séquence</h2>
+        <hr>
+        <p class="bold">1) Vérifier les vols/itinéraires disponibles</p>
+        <img src="Design/img/DSS-verifierItineraires.png" style="width:50%;">
+        <br><br/>
+        <p class="bold">2) Réserver un siège/cabine</p>
+        <img src="Design/img/DSS-reserver.png" style="width:50%;">
+        <br><br/>
+        <p class="bold">3) Payer un siège/cabine</p>
+        <img src="Design/img/DSS-payer.png" style="width:60%;">
+        <br><br/>
+        <p class="bold">4) Annuler et changer une réservation</p>
+        <img src="Design/img/DSS-changerAnnulerResa.png" style="width:60%;">
+        <br><br/>
+        <h2 id="tache3">Tâche 3 : Diagramme de paquets</h2>
+        <hr>
+        <img src="Design/img/Diagramme de paquet.png" style="width:35%; margin: 0 auto; display: flex;">
+        <h2 id="tache4">Tâche 4 : Identifications des modules réutilisables</h2>
+        <hr>
+        <p>Les modules à usage général sont :</p>
+        <ul>
+            <li>Module <span class="bold">Paiement</span> : très générique et s'utilise dans toutes les applications qui nécéssitent de faire des transactions. Il fait partie du domaine d'architecture.</li>
+            <br>
+            <li>Module <span class="bold">ReservationsClient</span> : modélise un client, les réservations qui lui sont associées et les entités reservables. Cela fait partie du domaine métier et peut être réutilisé dans des applications qui utilisent un système de réservations.</li>
+            <br>
+            <li>Module <span class="bold">Lieux</span> : modélise des emplacements physiques, ce module appartient au domaine de fondation, ce qui est donc applicable à beaucoup d'autres applications.</li>
+        </ul>
+        <h2 id="tache5">Tâche 5 : Contraintes OCL</h2>
+        <hr>
+        <p>La liste des contraintes OCL se trouve dans le fichier <a href="Design/contraintesOCL.txt">accessible ici</a>.</p>
+        <p class="bold">1) Réserver ne peut se faire que pour un siège libre. Identifiez la postcondition de l'opération réserver().
+        <p>
+        <p> context IReservable ::reserver()<br>
+            <span style="margin-left: 35px">pre: context.reservationAssocié->isNull()</span><br>
+            <span style="margin-left: 35px">post: context.reservationAssocié.reservationID = return</span>
+        <p>
+        <p class="bold">2) Le port de départ et d'arrivée doit être le même.
+        <p>
+        <p> context ItinerairePaquebot<br>
+            <span style="margin-left: 35px">inv : self.lieuDepart = self.lieuArrivee</span>
+        <p>
+        <p class="bold">3) Un paquebot peut être assigné à plusieurs itinéraires tant qu'ils ne se chevauchent pas.
+        <p>
+        <p> context Paquebot:<br>
+            <span style="margin-left: 35px">inv: not self.itinerairesAffectes->exists(i1, i2 | [ <span style="font-weight: bold">(i1.lieuDepart->union(i1.portsIntermediaires))</span> -> intersection <span style="font-weight: bold">(i2.lieuDepart->union(i2.portsIntermediaires))</span> ]->isEmpty())</span>
+        <p>
+            <br>
+        <h1 style="color: red;">Qualité du design</h1>
+        <h2 id="tache6">Tâche 6 : Discussion du couplage et de la cohésion des modules</h2>
+        <hr>
+        <h2 id="tache7">Tâche 7 : Discussion du fardeau des classes</h2>
+        <hr>
+        <ul>
+            <li>
+                <p class="bold">Classes du domaine de fondation</p>
+                <ul>
+                    <li>F(Money) = 0</li>
+                    <li>F(Text) = 0</li>
+                    <li>F(Integer) = 0</li>
+                    <li>F(disposition) = 0</li>
+                    <li>F(boolean) = 0</li>
+                    <li>F(Double) = 0</li>
+                    <li>F(Timestamp) = 0</li>
+                    <li>F(DateTime) = 0</li>
+                    <li>F(IRepository) = 0</li>
+                </ul>
+            </li>
+            <hr>
+            <li>
+                <p class="bold">
+                    IReservable a une dépendance bidirectionnelle avec dépendance ce qui augmente son fardeau et qui oblige sa réutilisation d'inclure Reservation avec une classe du domaine métier.
+                </p>
+                <ul>
+                    <li>ref(IReservable) = ref(Reservation) \ ref(IReservable)</li>
+                    <li>F(IReservable) = F(Reservation) + 1 - 1 = 7</li>
+                </ul>
+            </li>
+            <hr>
+            <li>
+                <p class="bold">Classe du domaine d'architecture avec son faible fardeau. Dans ce cas là, Paiement s'occupe des transactions.</p>
+                <ul>
+                    <li>ref(Paiement) = ref(Money) ∪ ref(Double)</li>
+                    <li>F(Paiement) = F(Money) + 1 + F(Double) + 1 = 2</li>
+                </ul>
+            </li>
+            <hr>
+            <li>
+                <p class="bold">Classe du domaine métier. Même interprétation que la classe IReservable</p>
+                <ul>
+                    <li>ref(Reservation) = ref(boolean) ∪ ref(Integer) ∪ ref(Double) ∪ ref(Timestamp) ∪ (ref(IReservable) \ ref(Reservation)) ∪ ref(Paiement)</li>
+                    <li>F(Reservation) = F(boolean) + 1 + F(Double) + 1 + F(Timestamp) + 1 + F(Integer) + 1 + 1 + F(Money) + 1 + 1 = 7</li>
+                </ul>
+            </li>
+            <hr>
+            <li>
+                <p class="bold">Classe du domaine métier. Elle représente un client dans le système. Son fardeau ni faible ni élevé confirme la bonne conception de cette classe.</p>
+                <ul>
+                    <li>ref(Client) = ref(Reservation) ∪ ref(Text) ∪ ref(DateTime)</li>
+                    <li>F(Client) = F(Reservation) + 1 + F(Text) + 1 + F(DateTime) + 1 = 10</li>
+                </ul>
+            </li>
+            <hr>
+            <li>
+                <p class="bold">Classe du domaine métier. Elle représente un siège dans le système. Son fardeau ni faible ni élevé confirme la bonne conception de cette classe.</p>
+                <ul>
+                    <li>ref(Siege) = ref(disposition) ∪ ref(Text) ∪ ref(Money) ∪ ref(Reservation)</li>
+                    <li>F(Siege) = F(disposition) + 1 + F(Reservation) + 1 = 9</li>
+                </ul>
+            </li>
+            <hr>
+            <li>
+                <p class="bold">Classe du domaine d'application. Elle représente un regroupement de siège dans le système. Son fardeau ni faible ni élevé indique que la conception de cette classe peut être améliorée.</p>
+                <ul>
+                    <li>ref(sectionSieges) = ref(Siege)</li>
+                    <li>F(sectionSieges) = F(Siege) + 1 = 10</li>
+                </ul>
+            </li>
+            <hr>
+            <li>
+                <p class="bold">Classe du domaine métier. Elle représente une cabine dans le système. Son fardeau ni faible ni élevé confirme la bonne conception de cette classe.</p>
+                <ul>
+                    <li>ref(Cabine) = ref(Text) ∪ ref(Money) ∪ ref(Reservation)</li>
+                    <li>F(Cabine) = F(Reservation) + 1 = 8</li>
+                </ul>
+            </li>
+            <hr>
+            <li>
+                <p class="bold">Classe du domaine métier. Elle représente un regroupement de cabine dans le système. Son fardeau ni faible ni élevé confirme la bonne conception de cette classe.</p>
+                <ul>
+                    <li>ref(sectionCabines) = ref(Cabine)</li>
+                    <li>F(sectionCabines) = F(Cabine) + 1 = 9</li>
+                </ul>
+            </li>
+            <hr>
+            <li>
+                <p class="bold">Classe du domaine métier. Interface et super-classe de sectionCabines et sectionSieges. Son fardeau ni faible ni élevé confirme la bonne conception de cette classe.</p>
+                <ul>
+                    <li>ref(Section) = ref(sectionCabines) ∪ ref(sectionSieges)</li>
+                    <li>F(Section) = F(sectionSieges) + 1 + 1 = 12</li>
+                </ul>
+            </li>
+            <hr>
+            <li>
+                <p class="bold">Classe du domaine métier. Elle représente un paquebot dans le système. Son fardeau ni faible ni élevé confirme la bonne conception de cette classe.</p>
+                <ul>
+                    <li>ref(Paquebot) = ref(sectionCabines)</li>
+                    <li>F(Paquebot) = F(sectionCabines) + 1 = 10</li>
+                </ul>
+            </li>
+            <hr>
+            <li>
+                <p class="bold">Classe du domaine métier. Elle représente un train dans le système. Son fardeau ni faible ni élevé confirme la bonne conception de cette classe.</p>
+                <ul>
+                    <li>ref(Train) = ref(sectionSieges)</li>
+                    <li>F(Train) = F(sectionSieges) + 1 = 11</li>
+                </ul>
+            </li>
+            <hr>
+            <li>
+                <p class="bold">Classe du domaine métier. Elle représente un avion dans le système. Son fardeau ni faible ni élevé confirme la bonne conception de cette classe.</p>
+                <ul>
+                    <li>ref(Avion) = ref(sectionSieges)</li>
+                    <li>F(Avion) = F(sectionSieges) + 1 = 11</li>
+                </ul>
+            </li>
+            <hr>
+            <li>
+                <p class="bold">Classe du domaine métier. Super-classe de Avion, Train et Paquebot. Son fardeau ni faible ni élevé confirme la bonne conception de cette classe.</p>
+                <ul>
+                    <li>ref(Vehicle) = ref(Section)</li>
+                    <li>F(Vehicle) = F(Section) + 1 = 13</li>
+                </ul>
+            </li>
+            <hr>
+            <li>
+                <p class="bold">Classe du domaine métier. Compagnie regroupe les véhicules. Son fardeau élevé indique que la conception de cette classe peut être améliorée.</p>
+                <ul>
+                    <li>ref(Compagnie) = ref(Vehicle) ∪ ref(Integer) ∪ ref(Text)</li>
+                    <li>F(Compagnie) = F(Vehicle) + 1 = 14</li>
+                </ul>
+            </li>
+            <hr>
+            <li>
+                <p class="bold">Classe du domaine d'architecture. Représentation d'un lieu. Son fardeau faible confirme la bonne conception de cette classe.</p>
+                <ul>
+                    <li>ref(Lieu) = ref(Text)</li>
+                    <li>F(Lieu) = F(Text) + 1 = 1</li>
+                </ul>
+            </li>
+            <hr>
+            <li>
+                <p class="bold">Classe du domaine d'architecture. Aeroport, Gare et Port sont des sous-classe de Lieu. Leur fardeaux faibles confirme la bonne conception de ces classes.</p>
+                <ul>
+                    <li>ref(Aeroport) = ref(Lieu)</li>
+                    <li>F(Aeroport) = F(Lieu) + 1 = 2</li><br>
+                    <li>ref(Gare) = ref(Lieu)</li>
+                    <li>F(Gare) = F(Lieu) + 1 = 2</li><br>
+                    <li>ref(Port) = ref(Lieu)</li>
+                    <li>F(Port) = F(Lieu) + 1 = 2</li>
+                </ul>
+            </li>
+            <hr>
+            <li>
+                <p class="bold">Classe du domaine métier. Représente l'itinéraire d'un voyage. Son fardeau ni faible ni élevé confirme la bonne conception de cette classe.</p>
+                <ul>
+                    <li>ref(Itineraire) = ref(Lieu) ∪ ref(Text) ∪ ref(DateTime) ∪ ref(Money)</li>
+                    <li>F(Itineraire) = F(Lieu) + 1 + F(Text) + 1 + F(DateTime) + 1 + F(Money) + 1 = 5</li>
+                </ul>
+            </li>
+            <hr>
+            <li>
+                <p class="bold">Classes du domaine métier. ItineraireAvion, ItinerairePaquebot et ItineraireTrain sont des sous-classe de Itineraire. Leur fardeaux ni faibles ni élevés confirme leur bonne conception.</p>
+                <ul>
+                    <li>ref(ItineraireAvion) = ref(Itineraire) ∪ ref(Aeroport) ∪ (ref(ItinerairePaquebot) \ ref(ItineraireAvion))</li>
+                    <li>F(ItineraireAvion) = F(Itineraire) + 1 + 1 + 1 + 1 = 9</li><br>
+                    <li>ref(ItinerairePaquebot) = ref(Itineraire) ∪ ref(Port) ∪ (ref(ItineraireAvion) \ ref(ItinerairePaquebot))</li>
+                    <li>F(ItinerairePaquebot) = F(Itineraire) + 1 + 1 + 1 + 1 = 9</li><br>
+                    <li>ref(ItineraireTrain) = ref(Itineraire) ∪ ref(Gare)</li>
+                    <li>F(ItineraireTrain) = F(Itineraire) + 1 + 1 = 7</li>
+                </ul>
+            </li>
+            <hr>
+            <li>
+                <p class="bold">Classes du domaine d'architecture. LieuRepository est bien conçu vu son faible fardeau. Le reste des classes *Repository ont un fardeau trop élevé car, en tant que base de données, elles enregistre des objets de classe du domaine métier.</p>
+                <ul>
+                    <li>ref(ItineraireRepository) = ref(Itineraire)</li>
+                    <li>F(ItineraireRepository) = F(Itineraire) + 1 = 6</li><br>
+                    <li>ref(CompagnieRepository) = ref(Compagnie)</li>
+                    <li>F(CompagnieRepository) = F(Compagnie) + 1 = 15</li><br>
+                    <li>ref(VehicleRepository) = ref(Vehicle)</li>
+                    <li>F(VehicleRepository) = F(Vehicle) + 1 = 14</li><br>
+                    <li>ref(LieuRepository) = ref(Lieu)</li>
+                    <li>F(LieuRepository) = F(Lieu) + 1 = 2</li><br>
+                    <li>ref(ClientRepository) = ref(Client)</li>
+                    <li>F(ClientRepository) = F(Client) + 1 = 11</li><br>
+                    <li>ref(ReservationRepository) = ref(Reservation)</li>
+                    <li>F(ReservationRepository) = F(Reservation) + 1 = 8</li>
+                </ul>
+            </li>
+            <hr>
+            <li>
+                <p class="bold">Classes du domaine d'application. ClientUI et AdminUI sont les clesse de contrôle du système. Leur fardeaux ni faibles ni élevés indique que la conception de ces classes peuvent être améliorée.</p>
+                <ul>
+                    <li>ref(AdminUI) = ref(IReservable) ∪ ref(Text) ∪ ref(Filtre)</li>
+                    <li>F(AdminUI) = F(IReservable) + 1 + F(Text) + 1 + F(Filtre) + 1 = 10</li><br>
+                    <li>ref(ClientUI) = ref(Client) ∪ ref(AdminUI)</li>
+                    <li>F(ClientUI) = F(Client) + 1 = 11</li>
+                </ul>
+            </li>
+        </ul>
+        <h2 id="tache8">Tâche 8 : Graphe IA et justification</h2>
+        <hr>
+        <div class="flex-wrapper">
+            <img src="Design/img/IAdiag.png" style="width: 30%">
+            <table class="tg">
+                <tr>
+                    <th class="tg-s268"><span class="bold">Modules</span></th>
+                    <th class="tg-s268"><span class="bold">Instabilité</span></th>
+                    <th class="tg-s268"><span class="bold">Abstraction</span></th>
+                </tr>
+                <tr>
+                    <td class="tg-s268">Paiement</td>
+                    <td class="tg-s268">0</td>
+                    <td class="tg-s268">1/2 = 0.5</td>
+                </tr>
+                <tr>
+                    <td class="tg-s268">ReservationsClient</td>
+                    <td class="tg-s268">0.5</td>
+                    <td class="tg-s268">1/3 = 0.33</td>
+                </tr>
+                <tr>
+                    <td class="tg-s268">Transit</td>
+                    <td class="tg-s268">0</td>
+                    <td class="tg-s268">2/8 = 0.25</td>
+                </tr>
+                <tr>
+                    <td class="tg-s268">GUI</td>
+                    <td class="tg-s268">1</td>
+                    <td class="tg-s268">1/9 = 0.11</td>
+                </tr>
+                <tr>
+                    <td class="tg-s268">CompagnieDeTransport</td>
+                    <td class="tg-s268">0.66</td>
+                    <td class="tg-s268">4/19 = 0.21</td>
+                </tr>
+            </table>
+        </div>
+        <ul>
+            <li>Le module <span class="bold">Paiement</span> est parfaitement stable (Instabilité = 0) ce qui est normal puisqu'il sera potentiellement utilisé par beaucoup d'autres modules : il se doit donc d'être très générique (i.e. abstrait) et doit fonctionner de façon indépendante.</li>
+            <br>
+            <li>L'instabilité très faible de <span class="bold">Transit</span> s'explique par le fait que ces paquets n'ont besoin que de très peu de dépendences pour pouvoir fonctionner. En contrepartie, ils ne sont pas suffisement abstrait </li>
+            <li>L'instabilité de <span class="bold">GUI</span> montre que le paquet est instable et dépendant.</li>
+            <li>L'instabilité de <span class="bold">ReservationClient</span> et de <span class="bold">CompagnieDeTransport</span> montre que les paquets sont
+                partiellement instables et dépendants.
+            </li>
+            <br>
+            <li>Le niveau d’abstraction pour les paquets <span class="bold">ReservationClient</span>, <span class="bold">Transit</span>, <span class="bold">GUI</span>,
+                <span class="bold">CompagnieDeTransport</span> est compris entre 0 et 0.25. C'est un niveau assez faible.
+            </li>
+            <li>Le niveau d’abstraction pour <span class="bold">Paiement</span> est moyen signifie le design peut partiellement varier,
+                s’étendre, sans modifier les paquets dépendants (OCP).
+            </li>
+            <br>
+            <li>
+                La relation entre l'<span class="bold">instabilité</span> (axe horizontal) et l’<span class="bold">abstraction</span> (axe vertical) nous montre que tous
+                nos paquets sont en dessous de la <span class="bold">'main sequence'</span>, mais pas dans la <span class="bold">'zone of pain'</span>.
+                <ul>
+                    <li>paquet <span class="bold">Paiement</span> avec D=0.5</li>
+                    <li>paquet <span class="bold">Transit</span> avec D=0.75</li>
+                    <li>paquet <span class="bold">GUI</span> avec D=0.11</li>
+                    <li>paquet <span class="bold">ReservationClient</span> D=0.4</li>
+                    <li>paquet <span class="bold">CompagnieDeTransport</span> D=0.2</li>
+                </ul>
+                <br>
+                Cela signifie que nos paquets ont une <span class="bold">stabilité moyenne</span> et un <span class="bold">niveau d'abstraction faible</span>.
+            </li>
+        </ul>
+        <h2 id="tache9">Tâche 9 : Justification de l'application des principes de conception</h2>
+        <hr>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+Contraintes OCL :
+
+1) Réserver ne peut se faire que pour un siège/cabine libre
+
+context IReservable ::reserver()
+	pre: context.reservationAssocié->isNull()
+	post: context.reservationAssocié.reservationID = return
+
+2) Le port de départ et d'arrivée doit être le même.
+
+context ItinerairePaquebot
+	inv : self.lieuDepart = self.lieuArrivee
+
+3) Un paquebot peut être assigné à plusieurs itinéraires tant qu'ils ne se chevauchent pas
+
+context Paquebot:
+	inv: not self.itinerairesAffectes->exists(i1, i2 | [ (i1.lieuDepart->union(i1.portsIntermediaires)) -> intersection (i2.lieuDepart->union(i2.portsIntermediaires)) ]->isEmpty())
