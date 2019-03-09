@@ -13,44 +13,47 @@
             .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
             .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
             .tg .tg-s268{text-align:left}
-            .flex-wrapper{display: flex; align-items: center;}
+            .flex-wrapper{display: flex; align-items: center;justify-content: flex-start;}
+            #infos p{margin-right: 100px;}
         </style>
     </head>
     <body style="margin: 0 40px;">
-        <h1 style="text-align: center;">
+        <h1 style="text-align: center; border: solid;">
             IFT 3911 - Devoir 2
         </h1>
         <h2>
             Informations générales
         </h2>
         <hr>
-        <p>
-            <span class="bold">Nom: </span>Jonathan Caspar
-            <br />
-            <span class="bold">Matricule (4 derniers chiffres): </span>9041
-            <br />
-            <span class="bold">Courriel: </span>jonathan.caspar@umontreal.ca
-            <br />
-            <span class="bold">temps mis: </span>24 heures
-        </p>
-        <p>
-            <span class="bold">Nom: </span>Johnny Pho
-            <br/>
-            <span class="bold">Matricule(4 derniers chiffres): </span>6014
-            <br /> 
-            <span class="bold">Courriel: </span>johnny.pho@umontreal.ca
-            <br />
-            <span class="bold">temps mis: </span>24 heures
-        </p>
-        <p>
-            <span class="bold">Nom: </span>Emna Ghannouchi
-            <br/>
-            <span class="bold">Matricule(4 derniers chiffres): </span>5141
-            <br /> 
-            <span class="bold">Courriel: </span>amna.ghannouchi@umontreal.ca
-            <br />
-            <span class="bold">temps mis: </span>24 heures
-        </p>
+        <div class="flex-wrapper" id="infos">
+            <p>
+                    <span class="bold">Nom: </span>Jonathan Caspar
+                    <br />
+                    <span class="bold">Matricule (4 derniers chiffres): </span>9041
+                    <br />
+                    <span class="bold">Courriel: </span>jonathan.caspar@umontreal.ca
+                    <br />
+                    <span class="bold">temps mis: </span>24 heures
+                </p>
+                <p>
+                    <span class="bold">Nom: </span>Johnny Pho
+                    <br/>
+                    <span class="bold">Matricule(4 derniers chiffres): </span>6014
+                    <br /> 
+                    <span class="bold">Courriel: </span>johnny.pho@umontreal.ca
+                    <br />
+                    <span class="bold">temps mis: </span>24 heures
+                </p>
+                <p>
+                    <span class="bold">Nom: </span>Emna Ghannouchi
+                    <br/>
+                    <span class="bold">Matricule(4 derniers chiffres): </span>5141
+                    <br /> 
+                    <span class="bold">Courriel: </span>amna.ghannouchi@umontreal.ca
+                    <br />
+                    <span class="bold">temps mis: </span>24 heures
+                </p>
+            </div>
         <h2>
             Distribution des tâches
         </h2>
@@ -291,6 +294,8 @@
         <h1 style="color: red;">Qualité du design</h1>
         <h2 id="tache6">Tâche 6 : Discussion du couplage et de la cohésion des modules</h2>
         <hr>
+
+
         <h2 id="tache7">Tâche 7 : Discussion du fardeau des classes</h2>
         <hr>
         <ul>
@@ -311,7 +316,7 @@
             <hr>
             <li>
                 <p class="bold">
-                    IReservable a une dépendance bidirectionnelle avec dépendance ce qui augmente son fardeau et qui oblige sa réutilisation d'inclure Reservation avec une classe du domaine métier.
+                    L'interface IReservable a une association bidirectionnelle ce qui augmente son fardeau et oblige les classes qui l'implémentent à s'associer avec un objet Réservation (classe du domaine métier).
                 </p>
                 <ul>
                     <li>ref(IReservable) = ref(Reservation) \ ref(IReservable)</li>
@@ -320,7 +325,7 @@
             </li>
             <hr>
             <li>
-                <p class="bold">Classe du domaine d'architecture avec son faible fardeau. Dans ce cas là, Paiement s'occupe des transactions.</p>
+                <p class="bold">Classe du domaine d'architecture avec un faible fardeau. Paiement s'occupe des transactions d'argent.</p>
                 <ul>
                     <li>ref(Paiement) = ref(Money) ∪ ref(Double)</li>
                     <li>F(Paiement) = F(Money) + 1 + F(Double) + 1 = 2</li>
@@ -352,7 +357,7 @@
             </li>
             <hr>
             <li>
-                <p class="bold">Classe du domaine d'application. Elle représente un regroupement de siège dans le système. Son fardeau ni faible ni élevé indique que la conception de cette classe peut être améliorée.</p>
+                <p class="bold">Classe du domaine d'application. Elle représente un ensemble de types de siège dans le système. Son fardeau ni faible ni élevé indique que la conception de cette classe peut être améliorée.</p>
                 <ul>
                     <li>ref(sectionSieges) = ref(Siege)</li>
                     <li>F(sectionSieges) = F(Siege) + 1 = 10</li>
@@ -368,7 +373,7 @@
             </li>
             <hr>
             <li>
-                <p class="bold">Classe du domaine métier. Elle représente un regroupement de cabine dans le système. Son fardeau ni faible ni élevé confirme la bonne conception de cette classe.</p>
+                <p class="bold">Classe du domaine métier. Elle représente un ensemble de types de cabine dans le système. Son fardeau ni faible ni élevé confirme la bonne conception de cette classe.</p>
                 <ul>
                     <li>ref(sectionCabines) = ref(Cabine)</li>
                     <li>F(sectionCabines) = F(Cabine) + 1 = 9</li>
@@ -376,7 +381,7 @@
             </li>
             <hr>
             <li>
-                <p class="bold">Classe du domaine métier. Interface et super-classe de sectionCabines et sectionSieges. Son fardeau ni faible ni élevé confirme la bonne conception de cette classe.</p>
+                <p class="bold">Classe du domaine métier. Interface et super-classe des interfaces sectionCabines et sectionSieges. Son fardeau ni faible ni élevé confirme la bonne conception de cette classe.</p>
                 <ul>
                     <li>ref(Section) = ref(sectionCabines) ∪ ref(sectionSieges)</li>
                     <li>F(Section) = F(sectionSieges) + 1 + 1 = 12</li>
@@ -432,7 +437,7 @@
             </li>
             <hr>
             <li>
-                <p class="bold">Classe du domaine d'architecture. Aeroport, Gare et Port sont des sous-classe de Lieu. Leur fardeaux faibles confirme la bonne conception de ces classes.</p>
+                <p class="bold">Classe du domaine d'architecture. Aeroport, Gare et Port sont des sous-classe de Lieu. Leurs fardeaux faibles confirment la bonne conception de ces classes.</p>
                 <ul>
                     <li>ref(Aeroport) = ref(Lieu)</li>
                     <li>F(Aeroport) = F(Lieu) + 1 = 2</li><br>
@@ -444,7 +449,7 @@
             </li>
             <hr>
             <li>
-                <p class="bold">Classe du domaine métier. Représente l'itinéraire d'un voyage. Son fardeau ni faible ni élevé confirme la bonne conception de cette classe.</p>
+                <p class="bold">Classe du domaine métier. Représente l'itinéraire d'un voyage (abstrait). Son fardeau ni faible ni élevé confirme la bonne conception de cette classe.</p>
                 <ul>
                     <li>ref(Itineraire) = ref(Lieu) ∪ ref(Text) ∪ ref(DateTime) ∪ ref(Money)</li>
                     <li>F(Itineraire) = F(Lieu) + 1 + F(Text) + 1 + F(DateTime) + 1 + F(Money) + 1 = 5</li>
@@ -452,7 +457,7 @@
             </li>
             <hr>
             <li>
-                <p class="bold">Classes du domaine métier. ItineraireAvion, ItinerairePaquebot et ItineraireTrain sont des sous-classe de Itineraire. Leur fardeaux ni faibles ni élevés confirme leur bonne conception.</p>
+                <p class="bold">Classes du domaine métier. ItineraireAvion, ItinerairePaquebot et ItineraireTrain sont des sous-classe de Itineraire. Leurs fardeaux ni faibles ni élevés confirment leurs bonnes conceptions.</p>
                 <ul>
                     <li>ref(ItineraireAvion) = ref(Itineraire) ∪ ref(Aeroport) ∪ (ref(ItinerairePaquebot) \ ref(ItineraireAvion))</li>
                     <li>F(ItineraireAvion) = F(Itineraire) + 1 + 1 + 1 + 1 = 9</li><br>
@@ -464,7 +469,7 @@
             </li>
             <hr>
             <li>
-                <p class="bold">Classes du domaine d'architecture. LieuRepository est bien conçu vu son faible fardeau. Le reste des classes *Repository ont un fardeau trop élevé car, en tant que base de données, elles enregistre des objets de classe du domaine métier.</p>
+                <p class="bold">Classes du domaine d'architecture. LieuRepository est bien conçu au vu de son faible fardeau. Le reste des classes *Repository ont un fardeau trop élevé car, en tant que base de données, elles stockent des objets de classe du domaine métier.</p>
                 <ul>
                     <li>ref(ItineraireRepository) = ref(Itineraire)</li>
                     <li>F(ItineraireRepository) = F(Itineraire) + 1 = 6</li><br>
@@ -482,7 +487,7 @@
             </li>
             <hr>
             <li>
-                <p class="bold">Classes du domaine d'application. ClientUI et AdminUI sont les clesse de contrôle du système. Leur fardeaux ni faibles ni élevés indique que la conception de ces classes peuvent être améliorée.</p>
+                <p class="bold">Classes du domaine d'application. ClientUI et AdminUI sont les classes de contrôle (et interface graphique) du système. Leurs fardeaux ni faibles ni élevés indiquent que la conception de ces classes peut être améliorée.</p>
                 <ul>
                     <li>ref(AdminUI) = ref(IReservable) ∪ ref(Text) ∪ ref(Filtre)</li>
                     <li>F(AdminUI) = F(IReservable) + 1 + F(Text) + 1 + F(Filtre) + 1 = 10</li><br>
@@ -560,5 +565,60 @@
         </ul>
         <h2 id="tache9">Tâche 9 : Justification de l'application des principes de conception</h2>
         <hr>
+        <ul>
+            <li>
+                Application de <span class="bold">DIP : Dépendre des abstractions, pas des implémentations</span>
+                <ul><br>
+                    <li>
+                        <span class="bold">IReservable/Reservation</span> : L'objet Réservation est associé à un objet (abstrait) réservable (qui implémente l'interface IReservable). L'ajout d'un nouveau type d'entité réservable sera facilité (en faisant implémenter l'interface IReservable par le nouvel objet).
+                    </li><br>
+
+                    <li>
+                        <span class="bold">Cabine dépend d'une interface SectionCabines</span> 
+                    </li><br>
+
+                    <li>
+                        <span class="bold">Siege dépend d'une interface SectionSieges</span> 
+                    </li><br>
+
+                    <li>
+                        <span class="bold">Compagnie (possède) dépend d'une liste abstraite de Vehicule</span> 
+                    </li><br>
+
+                    <li>
+                        <span class="bold">Les classes LieuRepository, ItineraireRepository et VehiculeRepository dépendent de classes abstraites (car ces dernières sont susceptibles d'être étendues à l'avenir) qui sont respectivement les classes Lieu, Itineraire et Vehicule.</span> 
+                    </li><br>
+
+                    <li>
+                        <span class="bold">Réservation dépend d'une interface Paiement plutôt que d'un type de paiement concret.</span> 
+                    </li><br>
+                </ul>
+            </li><br>
+
+            <li>
+                Application de <span class="bold">ISP : Plusieurs interfaces spécifiques pour chaque client valent mieux qu'une seule interface générale</span>
+                <ul><br>
+                    <li>
+                        <span class="bold">SectionSieges / SectionCabines</span> : on utilise une interface spéficique pour chacune des deux classes puisque les sections de type Cabine et rangées de Cabine ont des propriétés différentes.
+                    </li><br>
+                </ul>
+            </li><br>
+
+            <li>
+                Application de <span class="bold">OCP : Une classe doit être ouverte à l'extension, mais fermée à la modification</span>
+                <ul><br>
+                    <li>
+                        <span class="bold">Lieu, Itinéraire</span> : possibilité d'ajouter de nouveaux lieux et types d'itinéraires par héritage de Lieu et Itinéraire
+                    </li><br>
+                    <li>
+                        <span class="bold">Véhicule</span> : possibilité d'ajouter de nouveaux types de véhicules par héritage de Véhicule
+                    </li><br>
+                </ul>
+            </li><br>
+        </ul>
+ <br>
+ <br>
+ <br>
+ <br>
     </body>
 </html>
