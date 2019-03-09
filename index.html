@@ -529,7 +529,7 @@
             </table>
         </div>
         <ul>
-            <li>Le module <span class="bold">Paiement</span> est parfaitement stable (Instabilité = 0) ce qui est normal puisqu'il sera potentiellement utilisé par beaucoup d'autres modules : il se doit donc d'être très générique (i.e. abstrait) et doit fonctionner de façon indépendante.</li>
+            <li>Le module <span class="bold">Paiement</span> est parfaitement stable (Instabilité = 0) ce qui est normal puisqu'il sera potentiellement utilisé par beaucoup d'autres modules : il se doit donc d'être très générique (i.e. abstrait) pour l'extension future de modes de paiement, et il doit fonctionner de façon indépendante (car appartient au domaine d'architecture).</li>
             <br>
             <li>L'instabilité très faible de <span class="bold">Transit</span> s'explique par le fait que ces paquets n'ont besoin que de très peu de dépendences pour pouvoir fonctionner. En contrepartie, ils ne sont pas suffisement abstrait </li>
             <li>L'instabilité de <span class="bold">GUI</span> montre que le paquet est instable et dépendant.</li>
