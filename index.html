@@ -27,33 +27,33 @@
         <hr>
         <div class="flex-wrapper" id="infos">
             <p>
-                    <span class="bold">Nom: </span>Jonathan Caspar
-                    <br />
-                    <span class="bold">Matricule (4 derniers chiffres): </span>9041
-                    <br />
-                    <span class="bold">Courriel: </span>jonathan.caspar@umontreal.ca
-                    <br />
-                    <span class="bold">temps mis: </span>24 heures
-                </p>
-                <p>
-                    <span class="bold">Nom: </span>Johnny Pho
-                    <br/>
-                    <span class="bold">Matricule(4 derniers chiffres): </span>6014
-                    <br /> 
-                    <span class="bold">Courriel: </span>johnny.pho@umontreal.ca
-                    <br />
-                    <span class="bold">temps mis: </span>24 heures
-                </p>
-                <p>
-                    <span class="bold">Nom: </span>Emna Ghannouchi
-                    <br/>
-                    <span class="bold">Matricule(4 derniers chiffres): </span>5141
-                    <br /> 
-                    <span class="bold">Courriel: </span>amna.ghannouchi@umontreal.ca
-                    <br />
-                    <span class="bold">temps mis: </span>24 heures
-                </p>
-            </div>
+                <span class="bold">Nom: </span>Jonathan Caspar
+                <br />
+                <span class="bold">Matricule (4 derniers chiffres): </span>9041
+                <br />
+                <span class="bold">Courriel: </span>jonathan.caspar@umontreal.ca
+                <br />
+                <span class="bold">temps mis: </span>24 heures
+            </p>
+            <p>
+                <span class="bold">Nom: </span>Johnny Pho
+                <br/>
+                <span class="bold">Matricule(4 derniers chiffres): </span>6014
+                <br /> 
+                <span class="bold">Courriel: </span>johnny.pho@umontreal.ca
+                <br />
+                <span class="bold">temps mis: </span>24 heures
+            </p>
+            <p>
+                <span class="bold">Nom: </span>Emna Ghannouchi
+                <br/>
+                <span class="bold">Matricule(4 derniers chiffres): </span>5141
+                <br /> 
+                <span class="bold">Courriel: </span>amna.ghannouchi@umontreal.ca
+                <br />
+                <span class="bold">temps mis: </span>24 heures
+            </p>
+        </div>
         <h2>
             Distribution des tâches
         </h2>
@@ -294,8 +294,35 @@
         <h1 style="color: red;">Qualité du design</h1>
         <h2 id="tache6">Tâche 6 : Discussion du couplage et de la cohésion des modules</h2>
         <hr>
-
-
+        <h3>Couplage:</h3>
+        <ul>
+            <li>
+                <h4>Couplage d'heritage:</h4>
+                Les classes:
+                <ul>
+                    <li>PaiementCarteCredit et Paiement</li>
+                    <li>Lieu, Aeroport, Gare et Port</li>
+                    <li>Itinéraire, ItinéraireAvion, ItinéraireTrain et ItinérairePaquebot</li>
+                    <li>Vehicule, Paquebot, Train, Avion</li>
+                </ul>
+                <br>
+                Interagissent entres elles dans une hiérarchie d’héritage.
+            </li>
+            <li>
+                <h4>Couplage d'interaction:</h4>
+                <ul>
+                    <li><span class="bold">Couplage par contenu:</span> on trouve ce type de couplage entre la classe (IRepository) et (ItineraireRepository, CompagnieRepository, VehiculeRepository, LieuRepository, ClientRepository, ReservationRepository). En effet, le contenu des classes qui implémentent l'interface IRepository est une référence directe
+                        aux classes énoncés plus haut.
+                    </li>
+                    <br>
+                    <li><span class="bold">Couplage par contrôle:</span> on trouve ce type de couplage entre Client et ClientUI. On a
+                        Client qui connait la structure et logique interne de ClientUI ce qui la rend peu ré-utilisable (avec fardeau = 11).
+                    </li>
+                    <br>
+                    <li><span class="bold">Couplage par données:</span> on utilise ce type de couplage dans presque tous les modules.</li>
+                </ul>
+            </li>
+        </ul>
         <h2 id="tache7">Tâche 7 : Discussion du fardeau des classes</h2>
         <hr>
         <ul>
@@ -440,9 +467,11 @@
                 <p class="bold">Classe du domaine d'architecture. Aeroport, Gare et Port sont des sous-classe de Lieu. Leurs fardeaux faibles confirment la bonne conception de ces classes.</p>
                 <ul>
                     <li>ref(Aeroport) = ref(Lieu)</li>
-                    <li>F(Aeroport) = F(Lieu) + 1 = 2</li><br>
+                    <li>F(Aeroport) = F(Lieu) + 1 = 2</li>
+                    <br>
                     <li>ref(Gare) = ref(Lieu)</li>
-                    <li>F(Gare) = F(Lieu) + 1 = 2</li><br>
+                    <li>F(Gare) = F(Lieu) + 1 = 2</li>
+                    <br>
                     <li>ref(Port) = ref(Lieu)</li>
                     <li>F(Port) = F(Lieu) + 1 = 2</li>
                 </ul>
@@ -460,9 +489,11 @@
                 <p class="bold">Classes du domaine métier. ItineraireAvion, ItinerairePaquebot et ItineraireTrain sont des sous-classe de Itineraire. Leurs fardeaux ni faibles ni élevés confirment leurs bonnes conceptions.</p>
                 <ul>
                     <li>ref(ItineraireAvion) = ref(Itineraire) ∪ ref(Aeroport) ∪ (ref(ItinerairePaquebot) \ ref(ItineraireAvion))</li>
-                    <li>F(ItineraireAvion) = F(Itineraire) + 1 + 1 + 1 + 1 = 9</li><br>
+                    <li>F(ItineraireAvion) = F(Itineraire) + 1 + 1 + 1 + 1 = 9</li>
+                    <br>
                     <li>ref(ItinerairePaquebot) = ref(Itineraire) ∪ ref(Port) ∪ (ref(ItineraireAvion) \ ref(ItinerairePaquebot))</li>
-                    <li>F(ItinerairePaquebot) = F(Itineraire) + 1 + 1 + 1 + 1 = 9</li><br>
+                    <li>F(ItinerairePaquebot) = F(Itineraire) + 1 + 1 + 1 + 1 = 9</li>
+                    <br>
                     <li>ref(ItineraireTrain) = ref(Itineraire) ∪ ref(Gare)</li>
                     <li>F(ItineraireTrain) = F(Itineraire) + 1 + 1 = 7</li>
                 </ul>
@@ -472,15 +503,20 @@
                 <p class="bold">Classes du domaine d'architecture. LieuRepository est bien conçu au vu de son faible fardeau. Le reste des classes *Repository ont un fardeau trop élevé car, en tant que base de données, elles stockent des objets de classe du domaine métier.</p>
                 <ul>
                     <li>ref(ItineraireRepository) = ref(Itineraire)</li>
-                    <li>F(ItineraireRepository) = F(Itineraire) + 1 = 6</li><br>
+                    <li>F(ItineraireRepository) = F(Itineraire) + 1 = 6</li>
+                    <br>
                     <li>ref(CompagnieRepository) = ref(Compagnie)</li>
-                    <li>F(CompagnieRepository) = F(Compagnie) + 1 = 15</li><br>
+                    <li>F(CompagnieRepository) = F(Compagnie) + 1 = 15</li>
+                    <br>
                     <li>ref(VehicleRepository) = ref(Vehicle)</li>
-                    <li>F(VehicleRepository) = F(Vehicle) + 1 = 14</li><br>
+                    <li>F(VehicleRepository) = F(Vehicle) + 1 = 14</li>
+                    <br>
                     <li>ref(LieuRepository) = ref(Lieu)</li>
-                    <li>F(LieuRepository) = F(Lieu) + 1 = 2</li><br>
+                    <li>F(LieuRepository) = F(Lieu) + 1 = 2</li>
+                    <br>
                     <li>ref(ClientRepository) = ref(Client)</li>
-                    <li>F(ClientRepository) = F(Client) + 1 = 11</li><br>
+                    <li>F(ClientRepository) = F(Client) + 1 = 11</li>
+                    <br>
                     <li>ref(ReservationRepository) = ref(Reservation)</li>
                     <li>F(ReservationRepository) = F(Reservation) + 1 = 8</li>
                 </ul>
@@ -490,7 +526,8 @@
                 <p class="bold">Classes du domaine d'application. ClientUI et AdminUI sont les classes de contrôle (et interface graphique) du système. Leurs fardeaux ni faibles ni élevés indiquent que la conception de ces classes peut être améliorée.</p>
                 <ul>
                     <li>ref(AdminUI) = ref(IReservable) ∪ ref(Text) ∪ ref(Filtre)</li>
-                    <li>F(AdminUI) = F(IReservable) + 1 + F(Text) + 1 + F(Filtre) + 1 = 10</li><br>
+                    <li>F(AdminUI) = F(IReservable) + 1 + F(Text) + 1 + F(Filtre) + 1 = 10</li>
+                    <br>
                     <li>ref(ClientUI) = ref(Client) ∪ ref(AdminUI)</li>
                     <li>F(ClientUI) = F(Client) + 1 = 11</li>
                 </ul>
@@ -534,91 +571,114 @@
             </table>
         </div>
         <ul>
-            <li>Le module <span class="bold">Paiement</span> est parfaitement stable (Instabilité = 0) ce qui est normal puisqu'il sera potentiellement utilisé par beaucoup d'autres modules : il se doit donc d'être très générique (i.e. abstrait) pour l'extension future de modes de paiement, et il doit fonctionner de façon indépendante (car appartient au domaine d'architecture).</li>
-            <br>
-            <li>L'instabilité très faible de <span class="bold">Transit</span> s'explique par le fait que ces paquets n'ont besoin que de très peu de dépendences pour pouvoir fonctionner. En contrepartie, ils ne sont pas suffisement abstrait </li>
-            <li>L'instabilité de <span class="bold">GUI</span> montre que le paquet est instable et dépendant.</li>
-            <li>L'instabilité de <span class="bold">ReservationClient</span> et de <span class="bold">CompagnieDeTransport</span> montre que les paquets sont
-                partiellement instables et dépendants.
+            <li> Le module <span class="bold">Paiement</span> est parfaitement stable (Instabilité = 0) ce qui est normal puisqu'il
+                sera potentiellement utilisé par beaucoup d'autres modules : il se doit donc d'être très
+                générique (i.e. abstrait) pour l'extension future de modes de paiement, et il doit
+                fonctionner de façon indépendante (car appartient au domaine d'architecture). C'est
+                d'ailleurs le module qui a le plus d'abstraction (A=0.5) ce qui est normal puisqu’ elle est
+                invariante.
             </li>
-            <br>
-            <li>Le niveau d’abstraction pour les paquets <span class="bold">ReservationClient</span>, <span class="bold">Transit</span>, <span class="bold">GUI</span>,
-                <span class="bold">CompagnieDeTransport</span> est compris entre 0 et 0.25. C'est un niveau assez faible.
+            <br>        
+            <li>Le module <span class="bold">Transit</span> est parfaitement stable (Instabilité = 0) et indépendant. Il est utilisé
+                par trois autres modules, il doit être ouvert aux extensions et il doit fonctionner de façon
+                indépendante (car appartient au domaine d'architecture). Son niveau d'abstraction
+                (A=0.25) ce qui la rend peu variante dans le design.
             </li>
-            <li>Le niveau d’abstraction pour <span class="bold">Paiement</span> est moyen signifie le design peut partiellement varier,
-                s’étendre, sans modifier les paquets dépendants (OCP).
+            <br>        
+            <li>Le module <span class="bold">GUI</span> est totalement instable (Instabilité = 1) cela s'explique par le fait qu’il
+                dépend de trois autres modules. Il est complètement dépendant des ces trois modules et a chaque modification de ces derniers, il y a un risque que le module GUI en soit affecté. Ce module appartient au domaine d'application, ce qui explique sa faible abstraction (c'est un module assez modifiable).
             </li>
-            <br>
+            <br>        
+            <li>Le module <span class="bold">ReservationClient</span> a une instabilité de 0.5 : cela s'explique par le
+                fait qu'il dépend de deux autres modules, d'ailleurs il appartient au domaine métier.
+                Il présente une abstraction ce qui est normal, vu que c'est un module qui est directement
+                impacté par deux autres modules.
+            </li>
+            <br>        
+            <li>Le module <span class="bold">CompagnieDeTransport</span> a une instabilité de 0.66 : cela s'explique par le fait
+                qu'il dépend de deux autres modules, d'ailleurs il appartient au domaine métier. Il doit
+                être variant mais il présente une abstraction de 0.21, c'est un viol de OCP.
+            </li>
+            <br>        
             <li>
-                La relation entre l'<span class="bold">instabilité</span> (axe horizontal) et l’<span class="bold">abstraction</span> (axe vertical) nous montre que tous
-                nos paquets sont en dessous de la <span class="bold">'main sequence'</span>, mais pas dans la <span class="bold">'zone of pain'</span>.
+                La relation entre la stabilité (axe horizontal) et l’abstraction (axe vertical) nous montre que tous
+                nos paquets sont en dessous de la main sequence, mais pas dans la zone of pain.
                 <ul>
-                    <li>paquet <span class="bold">Paiement</span> avec D=0.5</li>
-                    <li>paquet <span class="bold">Transit</span> avec D=0.75</li>
-                    <li>paquet <span class="bold">GUI</span> avec D=0.11</li>
-                    <li>paquet <span class="bold">ReservationClient</span> D=0.4</li>
-                    <li>paquet <span class="bold">CompagnieDeTransport</span> D=0.2</li>
+                    <br>
+                    <li>paquet <span class="bold">Paiement</span> avec D = |0.5 + 0 - 1| = <span class="bold">0.5</span></li>
+                    <li>paquet <span class="bold">Transit</span> avec D = |0 + 0.25 - 1| = <span class="bold">0.75</span> (trop élevé, module n'est pas assez abstrait)</li>
+                    <li>paquet <span class="bold">GUI</span> avec D = |1 + 0.11 - 1| = <span class="bold">0.11</span></li>
+                    <li>paquet <span class="bold">ReservationClient</span> D = |0.5 + 0.33 - 1| = <span class="bold">0.17</span></li>
+                    <li>paquet <span class="bold">CompagnieDeTransport</span> D = |0.66 + 0.21 - 1| = <span class="bold">0.13</span></li>
                 </ul>
-                <br>
-                Cela signifie que nos paquets ont une <span class="bold">stabilité moyenne</span> et un <span class="bold">niveau d'abstraction faible</span>.
             </li>
         </ul>
+        De manière générale : chaque paquet dépend de paquets plus stables que lui et il n'y a aucune
+        dépendence cyclique dans les dépendances entre paquets (respect du "Acyclic Dependency Principle (ADP)").
         <h2 id="tache9">Tâche 9 : Justification de l'application des principes de conception</h2>
         <hr>
         <ul>
             <li>
                 Application de <span class="bold">DIP : Dépendre des abstractions, pas des implémentations</span>
-                <ul><br>
+                <ul>
+                    <br>
                     <li>
                         <span class="bold">IReservable/Reservation</span> : L'objet Réservation est associé à un objet (abstrait) réservable (qui implémente l'interface IReservable). L'ajout d'un nouveau type d'entité réservable sera facilité (en faisant implémenter l'interface IReservable par le nouvel objet).
-                    </li><br>
-
+                    </li>
+                    <br>
                     <li>
                         <span class="bold">Cabine dépend d'une interface SectionCabines</span> 
-                    </li><br>
-
+                    </li>
+                    <br>
                     <li>
                         <span class="bold">Siege dépend d'une interface SectionSieges</span> 
-                    </li><br>
-
+                    </li>
+                    <br>
                     <li>
                         <span class="bold">Compagnie (possède) dépend d'une liste abstraite de Vehicule</span> 
-                    </li><br>
-
+                    </li>
+                    <br>
                     <li>
                         <span class="bold">Les classes LieuRepository, ItineraireRepository et VehiculeRepository dépendent de classes abstraites (car ces dernières sont susceptibles d'être étendues à l'avenir) qui sont respectivement les classes Lieu, Itineraire et Vehicule.</span> 
-                    </li><br>
-
+                    </li>
+                    <br>
                     <li>
                         <span class="bold">Réservation dépend d'une interface Paiement plutôt que d'un type de paiement concret.</span> 
-                    </li><br>
+                    </li>
+                    <br>
                 </ul>
-            </li><br>
-
+            </li>
+            <br>
             <li>
                 Application de <span class="bold">ISP : Plusieurs interfaces spécifiques pour chaque client valent mieux qu'une seule interface générale</span>
-                <ul><br>
+                <ul>
+                    <br>
                     <li>
                         <span class="bold">SectionSieges / SectionCabines</span> : on utilise une interface spéficique pour chacune des deux classes puisque les sections de type Cabine et rangées de Cabine ont des propriétés différentes.
-                    </li><br>
+                    </li>
+                    <br>
                 </ul>
-            </li><br>
-
+            </li>
+            <br>
             <li>
                 Application de <span class="bold">OCP : Une classe doit être ouverte à l'extension, mais fermée à la modification</span>
-                <ul><br>
+                <ul>
+                    <br>
                     <li>
                         <span class="bold">Lieu, Itinéraire</span> : possibilité d'ajouter de nouveaux lieux et types d'itinéraires par héritage de Lieu et Itinéraire
-                    </li><br>
+                    </li>
+                    <br>
                     <li>
                         <span class="bold">Véhicule</span> : possibilité d'ajouter de nouveaux types de véhicules par héritage de Véhicule
-                    </li><br>
+                    </li>
+                    <br>
                 </ul>
-            </li><br>
+            </li>
+            <br>
         </ul>
- <br>
- <br>
- <br>
- <br>
+        <br>
+        <br>
+        <br>
+        <br>
     </body>
 </html>
