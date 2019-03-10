@@ -15,6 +15,7 @@
             .tg .tg-s268{text-align:left}
             .flex-wrapper{display: flex; align-items: center;justify-content: flex-start;}
             #infos p{margin-right: 100px;}
+            #tache1, #tache2, #tache3, #tache4, #tache5, #tache6, #tache7, #tache8, #tache9 {color: darkgreen;}
         </style>
     </head>
     <body style="margin: 0 40px;">
@@ -33,7 +34,7 @@
                 <br />
                 <span class="bold">Courriel: </span>jonathan.caspar@umontreal.ca
                 <br />
-                <span class="bold">temps mis: </span>24 heures
+                <span class="bold">Temps passé: </span>30 heures
             </p>
             <p>
                 <span class="bold">Nom: </span>Johnny Pho
@@ -42,7 +43,7 @@
                 <br /> 
                 <span class="bold">Courriel: </span>johnny.pho@umontreal.ca
                 <br />
-                <span class="bold">temps mis: </span>24 heures
+                <span class="bold">Temps passé: </span>28 heures
             </p>
             <p>
                 <span class="bold">Nom: </span>Emna Ghannouchi
@@ -51,7 +52,7 @@
                 <br /> 
                 <span class="bold">Courriel: </span>amna.ghannouchi@umontreal.ca
                 <br />
-                <span class="bold">temps mis: </span>24 heures
+                <span class="bold">Temps passé: </span>28 heures
             </p>
         </div>
         <h2>
@@ -216,13 +217,13 @@
         <h1>Hypothèses</h1>
         <hr>
         <ul>
-            <li>Les avions possèdent toujours au moins une section (par défaut 1 section = intégralité des sièges qui composent l'avion).</li>
+            <li>Les avions possèdent toujours au moins une section (par défaut 1 section = intégralité des sièges/cabines qui composent l'avion).</li>
             <li>Un siège est considéré "libre lorsqu'il possède un attribut "reservationAssociée" nul.</li>
             <li>Un siège est considéré "réservé pour 24h" si sa "reservationAssociée" a la valeur de son attribut "Confirmé = False".</li>
             <li>Un siège est considéré "réservé définitivement" si sa "reservationAssociée" a la valeur de son attribut "Confirmé = True".</li>
-            <li>Un client peut réserver plusieurs sièges pour une même réservation (même numéro de réservation) pour plusieurs sièges.</li>
+            <li>Un client peut réserver plusieurs sièges/cabines pour une même réservation (même numéro de réservation) pour plusieurs sièges/cabines.</li>
             <li>Un client paye ou se faire rembourser le montant adéquat immédiatement après qu'il ait demandé une annulation ou une modification de réservation.</li>
-            <li>La partie alphabétique (2 lettres) de l'identifiant d'un vol est déterminée par l'attribut "shortName" de la compagnie aérienne qui offre le vol.</li>
+            <li>La partie alphabétique (2 lettres) de l'identifiant d'un vol est déterminée par l'attribut "sigle" de la compagnie qui offre l'itinéraire/trajet.</li>
         </ul>
         <h1>Sommaire</h1>
         <hr>
